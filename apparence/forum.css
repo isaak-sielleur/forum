@@ -1,0 +1,543 @@
+/* -----------------GENERAL----------------- */
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -----------------HEADER----------------- */
+
+section {
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section img {
+    height: 350px;
+}
+
+header {
+    min-height: 50px;
+    background-image: url('../medias/fond-header.jpg');
+    background-position: 390px;
+    text-align: center;
+    position: relative;
+}
+
+header nav {
+    display: inline-block;
+    justify-content: center;
+    display: flex;
+    padding: 10px 30px;
+}
+
+header nav a {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+    text-decoration: none;
+    font-family: 'Girassol';
+    font-size: 160%;
+    padding: 5px 30px;
+}
+
+header nav a:hover {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: white;
+    transition: border 1s ease-out;
+}
+
+
+/* -----------------ACCUEIL----------------- */
+
+.accueil {
+    background-image: url('../medias/fond-accueil.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.positionnement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contenuaccueil {
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.438) inset;
+    background-color: rgba(255, 255, 255, 0.479);
+    text-align: center;
+    padding: 10px;
+    width: 380px;
+    font-family: 'Alice';
+}
+
+
+/* -----------------CONNEXION----------------- */
+
+.connexion {
+    background-image: url('../medias/fond-connexion.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* -----------------FORMCONNEXION----------------- */
+
+.box {
+    margin-top: 30%;
+    margin-left: 50%;
+    width: 380px;
+    border-radius: 8px;
+    background-color: #333;
+    padding: 100px 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 70px 50px rgba(0, 0, 0, 0.4), 30px 50px 50px rgba(0, 0, 0, 0.2), -30px 50px 50px rgba(0, 0, 0, 0.2), inset 20px 0px 60px rgba(0, 0, 0, 0.1), inset -20px 0px 60px rgba(0, 0, 0, 0.1);
+}
+
+.box-top {
+    margin-bottom: 60px;
+}
+
+.box-avatar,
+.box-form {
+    margin-bottom: 20px;
+}
+
+.box-sub-title {
+    font: bold 12px/1 'Lato', sans-serif;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.box-title {
+    font: 300 24px/1 'Lato', sans-serif;
+    text-align: center;
+    color: rgba(255, 255, 255, .7);
+    margin-bottom: 8px;
+}
+
+.box-img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.box-field {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    margin-bottom: 20px;
+}
+
+.box-fields {
+    margin-bottom: 60px;
+}
+
+.box-text-field {
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    border: none;
+    padding: 16px 20px 8px 36px;
+    font: 16px/24px 'Lato', sans-serif;
+    color: #fff;
+}
+
+.box-field-line {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #fff;
+    transition: transform .2s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.box-text-field:valid~.box-field-line,
+.box-text-field:focus~.box-field-line {
+    transform: scaleX(1);
+}
+
+.box-placeholder {
+    font: 300 16px/24px 'Lato', sans-serif;
+    color: #fff;
+    opacity: .5;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 8px;
+    left: 36px;
+    pointer-events: none;
+    transform-origin: left;
+}
+
+.box-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.box-text-field:valid~.box-placeholder,
+.box-text-field:focus~.box-placeholder {
+    transform: scale(.8) translateY(-100%);
+    opacity: .8;
+}
+
+.box-btn {
+    display: block;
+    height: 44px;
+    background: radial-gradient(circle, #2fdbb6, #32d6b3, #32c9a8, #36c7a7, #38bb9f);
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    border-radius: 8px;
+    font: 300 16px/24px 'Lato', sans-serif;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.box-btn:hover {
+    background: radial-gradient(circle, #1da88a, #1ea084, #229c82, #23947b, #238d76);
+}
+
+.box-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* -----------------INSCRIPTION----------------- */
+
+.inscription {
+    background-image: url('../medias/fond-inscription.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -----------------PROFIL----------------- */
+
+form.form-example {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.container{
+    width: 300px;
+    background-color: #33333387;
+    margin:auto;
+    border-radius: 5% 5% 5%;
+
+}
+form{
+    margin:20px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+
+
+textarea {
+    resize: none;
+    width: 300px;
+    height: 170px;
+}
+
+.com{
+    font-size: 1.1rem;
+    color:white;
+
+}
+.but{
+    background: radial-gradient(circle, #2fdbb6, #32d6b3, #32c9a8, #36c7a7, #38bb9f);
+    border-radius: 5% 5% 5%;
+    color: white;
+}
+
+.whitext{
+    font-size:1.5rem ;
+    color: white;
+}
+
+/* -----------------PAGE FORUM----------------- */
+
+.forum {
+    background-image: url("../medias/fond-forum.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topicapparence {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.397);
+    box-shadow: inset 0px 2px 76px 20px rgba(0, 0, 0, 0.75);
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 3px groove black;
+    padding-left: 20px;
+}
+
+.topicapparence div a {
+    padding-top: 10px;
+    font-size: 200%;
+    text-decoration: none;
+    color: white;
+    font-variant: small-caps;
+}
+
+.orientation {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+}
+
+.id
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.id img
+{
+    width: 60px;
+    vertical-align: middle;
+}
+
+.id p
+{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sujet p {
+    font-size: 130%;
+    letter-spacing: 3px;
+}
+
+
+/* -----------------PAGE ADMINISTRATION----------------- */
+
+.admin {
+    background-image: url('../medias/fond-admin.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.position-admin
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.position-admin main
+{
+    width: 100%;
+    background-color: rgba(0, 128, 128, 0.561);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.adminoptions {
+    font-family: 'Josefin Sans';
+    color: #fff;
+}
+
+.formulaire-adminisration
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* -----------------PAGE MODERATION----------------- */
+
+.modo {
+    background-image: url('../medias/fond-modo.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* -----------------FOOTER----------------- */
+
+footer {
+    margin-top: auto;
+    background-image: url('../medias/fond-header.jpg');
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Josefin Sans';
+    font-variant: small-caps;
+    padding: 20px;
+}
+
+/* -----------------PROFIL----------------- */
+
+form.form-example {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.container{
+    width: 300px;
+    background-color: #33333387;
+    margin:auto;
+    border-radius: 5% 5% 5%;
+
+}
+form{
+    margin:20px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+
+
+
+
+.com{
+    font-size: 1.1rem;
+    color:white;
+
+}
+.but{
+    background: radial-gradient(circle, #2fdbb6, #32d6b3, #32c9a8, #36c7a7, #38bb9f);
+    border-radius: 5% 5% 5%;
+    color: white;
+}
+/* DISCUSSION ET MESSAGES  */
+.whitext{
+    font-size:1.5rem ;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    
+}
+.whait{
+    color: white;
+
+}
+
+.cont{
+    width: 700px;
+    background-color: #33333387;
+    margin:auto;
+    border-radius: 5% 5% 5%;
+    padding: 1rem;
+}
+
+.btncolo{
+    background: radial-gradient(circle, #1da88a, #1ea084, #229c82, #23947b, #238d76);
+}
+
+
+.btncolo:hover{
+    color: white;
+}
+.msgconv{
+    text-decoration: none;
+    color: rgb(238, 187, 238);
+    font-size: 1.2rem;
+}
+.msgconv:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.txtareamsg{
+   width: 700px;
+    background-color: #33333387;
+    margin:auto;
+    border-radius: 5% 5% 5%;
+    padding: 1rem;
+}
+
+.txtare {
+    resize: none;
+    width: 500px;
+    height: 170px;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.btncolo2{
+    background: radial-gradient(circle, #1da88a, #1ea084, #229c82, #23947b, #238d76);
+    width: 500px;
+    margin: auto;
+}
+.btncolo2:hover{
+    color: white;
+}
